@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import './style.css'
-import mainpage from './mainpage.vue'
+import page from './homepage.vue'
 
 import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
@@ -12,4 +12,4 @@ const vuetify = createVuetify({
   directives,
 })
 
-createApp(mainpage).use(vuetify).mount('#app')
+createApp(page).use(vuetify).mount('#app')
