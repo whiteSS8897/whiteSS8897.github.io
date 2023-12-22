@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>網頁測試</title>
+    <style>
+        .out{
+            background-color:#99ffff;
+            color:red;
+            font-weight:bold;
+            width:100px;
+            height:50px;
+            margin:20px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+        .choice{
+            flex:none;
+            width:6%;
+            margin-left:12%;
+            margin-right:12%;
+            padding-top:10px;
+            padding-bottom:10px;
+            background-color:#ffffcc;
+        }
+        .expand{
+            width:100px;
+            background-color:#dddddd;
+        }
+    </style>
+</head>
+<body>
+    <script src="https://unpkg.com/vue@2.3.4"></script>
+
+    <div style="font-size:40px; color:blue; text-align:center">
+        測試用網頁
+    </div>
+
+    <hr style="height:3px; background-color:blueviolet"/>
+
+    <div id="test1">
+        {{message}}{{message}}
+        {{message}}
+        {{message}}{{message}}
+        <div>
+            {{message}}
+        </div>
+    </div>
+
+    <div class="test0">
+        {{m}}
+    </div>
+
+    <div id="test2" style="margin-top:30px;">
+        <div style="display:flex;">
+            <div style="font-size:20px; flex:none; margin-right:15px;">你考幾分?</div>
+            <input type="text" v-model="score" style="font-size:20px;">
+        </div>
+        <div class="out">
+            <div v-if="score >= 60">及格</div>
+            <div v-if="score < 60">不及格</div>
+        </div>
+    </div>
+
+    <hr style="width:95%; height:1px; background-color:#404040; margin-top:50px; margin-bottom:50px;"/>
+
+    <div>
+        <div style="font-size:35px; text-align:center; color:#3636ff">版面練習</div>
+        <div style="display:flex">
+            <div style="flex:none; width:25%;">
+                <div style="font-size:24px; text-align:center; font-weight:bold;">
+                敘述
+                </div>
+                <div style="border-right: 2px #22ffff solid">
+                    <div style="padding-top:10px; padding-bottom:10px; margin-top:10px; margin-bottom:10px;">123456789</div>
+                    <div style="padding-top:10px; padding-bottom:10px; margin-top:10px; margin-bottom:10px;">巴拉巴拉巴拉</div>
+                    <div style="padding-top:10px; padding-bottom:10px; margin-top:10px; margin-bottom:10px;">gjuirehpwuhgurohnjoiwjpijh</div>
+                </div>
+            </div>
+            <div style="flex:none; width:75%;">
+                <div style="font-size:24px; text-align:center; font-weight:bold; display:flex; justify-content:center;">
+                    <div style="flex:none; width:10%; margin-left:10%; margin-right:10%;">
+                        選項一
+                    </div>
+                    <div style="flex:none; width:10%; margin-left:10%; margin-right:10%;">
+                        選項二
+                    </div>
+                    <div style="flex:none; width:10%; margin-left:10%; margin-right:10%;">
+                        選項三
+                    </div>
+                </div>
+                <div style="font-size:16px; text-align:center; display:flex; justify-content:center; margin-top:10px; margin-bottom:10px;">
+                    <div class="choice" onmouseover="touch1(this)" onmouseleave="untouch1(this)">
+                        a
+                    </div>
+                    <div class="choice" onmouseover="touch1(this)" onmouseleave="untouch1(this)">
+                        b
+                    </div>
+                    <div class="choice" onmouseover="touch1(this)" onmouseleave="untouch1(this)">
+                        c
+                    </div>
+                </div>
+                <div style="font-size:16px; text-align:center; display:flex; justify-content:center; margin-top:10px; margin-bottom:10px;">
+                    <div class="choice" onmouseover="touch1(this)" onmouseleave="untouch1(this)">
+                        一
+                    </div>
+                    <div class="choice" onmouseover="touch1(this)" onmouseleave="untouch1(this)">
+                        二
+                    </div>
+                    <div class="choice" onmouseover="touch1(this)" onmouseleave="untouch1(this)">
+                        三
+                    </div>
+                </div>
+                <div style="font-size:16px; text-align:center; display:flex; justify-content:center; margin-top:10px; margin-bottom:10px;">
+                    <div class="choice" onmouseover="touch1(this)" onmouseleave="untouch1(this)">
+                        (1)
+                    </div>
+                    <div class="choice" onmouseover="touch1(this)" onmouseleave="untouch1(this)">
+                        (2)
+                    </div>
+                    <div class="choice" onmouseover="touch1(this)" onmouseleave="untouch1(this)">
+                        (3)
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top:50px;">
+            <details>
+                <summary class="expand" onmouseover="touch2(this)" onmouseleave="untouch2(this)">東東一</summary>  
+                <div style="margin:10px; margin-left:30px;">東東一裡面有一個東東</div>
+            </details>
+            <details>
+                <summary class="expand" onmouseover="touch2(this)" onmouseleave="untouch2(this)">東東二</summary>
+                <div style="margin:10px; margin-left:30px;">這裡面就沒有東東</div>
+            </details>
+            <details>
+                <summary class="expand" onmouseover="touch2(this)" onmouseleave="untouch2(this)">東東三</summary>
+                <div style="margin:10px; margin-left:30px;">吃飯睡覺打東東</div>
+            </details>
+        </div>
+    </div>
+
+
+        
+
+
+
+
+    <script>
+        new Vue({
+            el:"#test1",
+            data:{
+                message:"H"
+            }
+        })
+
+        new Vue({
+            el:".test0",
+            data:{
+                m:"Hello World!!!"
+            }
+        })
+
+        new Vue({
+            el:"#test2",
+            data:{
+                score:0
+            }
+        });
+
+        function touch1(n){
+            n.style.backgroundColor="#ffcccc";
+        }
+
+        function untouch1(n){
+            n.style.backgroundColor="#ffffcc";
+        }
+
+        function touch2(n){
+            n.style.backgroundColor="#888888";
+        }
+
+        function untouch2(n){
+            n.style.backgroundColor="#dddddd";
+        }
+    </script>
+</body>
+</html>
