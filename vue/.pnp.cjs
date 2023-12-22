@@ -30,7 +30,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@vitejs/plugin-vue", "virtual:1cecc1eb2bb6912e6a0f38fc6475be2773b44f29bd6198eb77da0923936c602751c17cbecde5450ad7fd3414aa74b43afacdab09596a0cdd5ca49602e7951cd3#npm:4.5.2"],\
             ["vite", "virtual:1cecc1eb2bb6912e6a0f38fc6475be2773b44f29bd6198eb77da0923936c602751c17cbecde5450ad7fd3414aa74b43afacdab09596a0cdd5ca49602e7951cd3#npm:5.0.10"],\
-            ["vue", "virtual:1cecc1eb2bb6912e6a0f38fc6475be2773b44f29bd6198eb77da0923936c602751c17cbecde5450ad7fd3414aa74b43afacdab09596a0cdd5ca49602e7951cd3#npm:3.3.13"]\
+            ["vue", "virtual:1cecc1eb2bb6912e6a0f38fc6475be2773b44f29bd6198eb77da0923936c602751c17cbecde5450ad7fd3414aa74b43afacdab09596a0cdd5ca49602e7951cd3#npm:3.3.13"],\
+            ["vuetify", "virtual:1cecc1eb2bb6912e6a0f38fc6475be2773b44f29bd6198eb77da0923936c602751c17cbecde5450ad7fd3414aa74b43afacdab09596a0cdd5ca49602e7951cd3#npm:3.4.8"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -1141,7 +1142,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["maplestort_web", "workspace:."],\
             ["@vitejs/plugin-vue", "virtual:1cecc1eb2bb6912e6a0f38fc6475be2773b44f29bd6198eb77da0923936c602751c17cbecde5450ad7fd3414aa74b43afacdab09596a0cdd5ca49602e7951cd3#npm:4.5.2"],\
             ["vite", "virtual:1cecc1eb2bb6912e6a0f38fc6475be2773b44f29bd6198eb77da0923936c602751c17cbecde5450ad7fd3414aa74b43afacdab09596a0cdd5ca49602e7951cd3#npm:5.0.10"],\
-            ["vue", "virtual:1cecc1eb2bb6912e6a0f38fc6475be2773b44f29bd6198eb77da0923936c602751c17cbecde5450ad7fd3414aa74b43afacdab09596a0cdd5ca49602e7951cd3#npm:3.3.13"]\
+            ["vue", "virtual:1cecc1eb2bb6912e6a0f38fc6475be2773b44f29bd6198eb77da0923936c602751c17cbecde5450ad7fd3414aa74b43afacdab09596a0cdd5ca49602e7951cd3#npm:3.3.13"],\
+            ["vuetify", "virtual:1cecc1eb2bb6912e6a0f38fc6475be2773b44f29bd6198eb77da0923936c602751c17cbecde5450ad7fd3414aa74b43afacdab09596a0cdd5ca49602e7951cd3#npm:3.4.8"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -1665,6 +1667,44 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packagePeers": [\
             "@types/typescript",\
             "typescript"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["vuetify", [\
+        ["npm:3.4.8", {\
+          "packageLocation": "./.yarn/cache/vuetify-npm-3.4.8-6f2dc61364-ceecbfcdf5.zip/node_modules/vuetify/",\
+          "packageDependencies": [\
+            ["vuetify", "npm:3.4.8"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:1cecc1eb2bb6912e6a0f38fc6475be2773b44f29bd6198eb77da0923936c602751c17cbecde5450ad7fd3414aa74b43afacdab09596a0cdd5ca49602e7951cd3#npm:3.4.8", {\
+          "packageLocation": "./.yarn/__virtual__/vuetify-virtual-e7ef0993a5/0/cache/vuetify-npm-3.4.8-6f2dc61364-ceecbfcdf5.zip/node_modules/vuetify/",\
+          "packageDependencies": [\
+            ["vuetify", "virtual:1cecc1eb2bb6912e6a0f38fc6475be2773b44f29bd6198eb77da0923936c602751c17cbecde5450ad7fd3414aa74b43afacdab09596a0cdd5ca49602e7951cd3#npm:3.4.8"],\
+            ["@types/typescript", null],\
+            ["@types/vite-plugin-vuetify", null],\
+            ["@types/vue", null],\
+            ["@types/vue-i18n", null],\
+            ["@types/webpack-plugin-vuetify", null],\
+            ["typescript", null],\
+            ["vite-plugin-vuetify", null],\
+            ["vue", "virtual:1cecc1eb2bb6912e6a0f38fc6475be2773b44f29bd6198eb77da0923936c602751c17cbecde5450ad7fd3414aa74b43afacdab09596a0cdd5ca49602e7951cd3#npm:3.3.13"],\
+            ["vue-i18n", null],\
+            ["webpack-plugin-vuetify", null]\
+          ],\
+          "packagePeers": [\
+            "@types/typescript",\
+            "@types/vite-plugin-vuetify",\
+            "@types/vue-i18n",\
+            "@types/vue",\
+            "@types/webpack-plugin-vuetify",\
+            "typescript",\
+            "vite-plugin-vuetify",\
+            "vue-i18n",\
+            "vue",\
+            "webpack-plugin-vuetify"\
           ],\
           "linkType": "HARD"\
         }]\
