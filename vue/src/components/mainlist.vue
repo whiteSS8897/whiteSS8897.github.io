@@ -4,12 +4,12 @@
         分類ㄧ
         </summary>
 
-            <div style="border-left:16px #333333 solid;">
+            <div style="border-left:16px #222222 solid;">
                 <div class="button detail_1_choice final_choice"
                     @click="choose_list('1-1') ,choosed_list($event)"
                     @mouseenter="touch_list($event)"
                     @mouseleave="untouch_list($event)"
-                    style="border-left:16px #333333 solid; background-color:#99bbff;"
+                    style="border-left:16px #555555 solid; background-color:#99bbff;"
                     >
                 {{names["page1_1"]}}
                 </div>
@@ -27,7 +27,7 @@
         分類二
         </summary>
 
-            <div style="border-left:16px #333333 solid;">
+            <div style="border-left:16px #222222 solid;">
                 <div class="button detail_1_choice final_choice"
                     @click="choose_list('2-1') ,choosed_list($event)"
                     @mouseenter="touch_list($event)"
@@ -48,7 +48,7 @@
         分類三
         </summary>
 
-            <div style="border-left:16px #333333 solid;">
+            <div style="border-left:16px #222222 solid;">
                 <div class="button detail_1_choice final_choice"
                     @click="choose_list('3-1') ,choosed_list($event)"
                     @mouseenter="touch_list($event)"
@@ -155,12 +155,12 @@ const props = defineProps({
             //原色的狀況
             if(n.target.style.backgroundColor==="rgb(221, 221, 221)"){
                 n.target.style.backgroundColor="#888888";
-                n.target.style.borderLeft="16px #333333 solid";
+                n.target.style.borderLeft="16px #555555 solid";
             }
             //藍色的狀況(被選的)
             else if(n.target.style.backgroundColor==="rgb(153, 187, 255)"){
                 n.target.style.backgroundColor="#7799cc";
-                n.target.style.borderLeft="16px #333333 solid";
+                n.target.style.borderLeft="16px #555555 solid";
             }
         }
     //滑鼠移出選項
@@ -184,7 +184,7 @@ const props = defineProps({
                 i.style.borderLeft="4px #888888 solid";
             }
             n.target.style.backgroundColor="#99bbff";  //選擇的選項設為藍色
-            n.target.style.borderLeft="16px #333333 solid";  //選擇的選項左邊框加粗
+            n.target.style.borderLeft="16px #555555 solid";  //選擇的選項左邊框加粗
         }
 
 
@@ -200,28 +200,28 @@ const props = defineProps({
     height:32px;
     padding:3px 0 3px 8px;
     border-bottom:1px #bbbbbb dotted;
-    border-left:4px #888888 solid;
+    border-left:4px #999999 solid;
     background-color:#dddddd;
     display:flex;
     align-items:center;
     white-space:nowrap;
 }
 .list_choice:hover ,.detail_1_choice:hover{
-    border-left:16px #333333 solid;
+    border-left:16px #555555 solid;
     background-color:#888888;
 }
 .summary_1:hover{
-    border-left:16px #333333 solid;
+    border-left:16px #555555 solid;
     background-color:#7755aa;
 }
 .detail_1[open] > summary{
     background-color:#ccaaff;
-    border-left:16px #333333 solid;
+    border-left:16px #222222 solid;
 }
 .detail_1_choice{
     padding:3px 0 3px 8px;
     background-color:#dddddd;
     border-bottom:1px #bbbbbb dotted;
-    border-left:4px #888888 solid;
+    border-left:4px #999999 solid;
 }
 </style>
