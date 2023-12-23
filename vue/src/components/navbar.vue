@@ -14,14 +14,20 @@
             <!-- Netflow字樣與後面副標 -->
             <div style="display:flex; align-items:end;">
                 <div class="title1">楓谷資料站</div>
-                <div class="title2" v-if="choose === 1">--{{list_names["page1"]}}</div>
-                <div class="title2" v-if="choose === 2">--{{list_names["page2"]}}</div>
-                <div class="title2" v-if="choose === 3">--{{list_names["page3"]}}</div>
-                <div class="title2" v-if="choose === 4">--{{list_names["page4"]}}</div>
-                <div class="title2" v-if="choose === 5">--{{list_names["page5"]}}</div>
-                <div class="title2" v-if="choose === 6">--{{list_names["page6"]}}</div>
-                <div class="title2" v-if="choose === 7">--{{list_names["page7"]}}</div>
-                <div class="title2" v-if="choose === 8">--{{list_names["page8"]}}</div>
+                <div class="title2" v-if="choose === '1-1'">--{{list_names["page1_1"]}}</div>
+                <div class="title2" v-if="choose === '1-2'">--{{list_names["page1_2"]}}</div>
+                <div class="title2" v-if="choose === '2-1'">--{{list_names["page2_1"]}}</div>
+                <div class="title2" v-if="choose === '2-2'">--{{list_names["page2_2"]}}</div>
+                <div class="title2" v-if="choose === '3-1'">--{{list_names["page3_1"]}}</div>
+                <div class="title2" v-if="choose === '3-2'">--{{list_names["page3_2"]}}</div>
+                <div class="title2" v-if="choose === '3-3'">--{{list_names["page3_3"]}}</div>
+                <div class="title2" v-if="choose === '3-4'">--{{list_names["page3_4"]}}</div>
+                <div class="title2" v-if="choose === '3-5'">--{{list_names["page3_5"]}}</div>
+                <div class="title2" v-if="choose === '4'">--{{list_names["page4"]}}</div>
+                <div class="title2" v-if="choose === '5'">--{{list_names["page5"]}}</div>
+                <div class="title2" v-if="choose === '6'">--{{list_names["page6"]}}</div>
+                <div class="title2" v-if="choose === '7'">--{{list_names["page7"]}}</div>
+                <div class="title2" v-if="choose === '8'">--{{list_names["page8"]}}</div>
             </div>
             
         </div>
