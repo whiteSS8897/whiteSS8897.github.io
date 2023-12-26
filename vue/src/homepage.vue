@@ -27,7 +27,7 @@
 
 
 <script setup>
-import {computed, reactive, ref, watch, onMounted} from "vue";
+import {computed, reactive, ref, watch, onBeforeMount} from "vue";
 import page1_1 from "./components/page1_1.vue";
 import page1_2 from "./components/page1_2.vue";
 import page2_1 from "./components/page2_1.vue";

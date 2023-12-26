@@ -62,7 +62,7 @@
 
 
 <script setup>
-import {computed, reactive, ref, watch, onMounted} from "vue";
+import {computed, reactive, ref, watch, onBeforeMount} from "vue";
 
 const light = ref(90)
 const emit = defineEmits(["update_light","list_expand"])

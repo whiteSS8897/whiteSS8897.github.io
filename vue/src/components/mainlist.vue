@@ -121,7 +121,7 @@
 
 
 <script setup>
-import {computed, reactive, ref, watch, onMounted} from "vue";
+import {computed, reactive, ref, watch, onBeforeMount} from "vue";
 
 //接收mainpage.vue丟過來的list_names
 const props = defineProps({
