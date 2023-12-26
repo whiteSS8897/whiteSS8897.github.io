@@ -1,7 +1,7 @@
 <template>
     <details class="detail_1" open>
         <summary class="button summary_1" style="height:25px;" @click="all_other_hide($event)">
-        分類ㄧ
+        符文相關
         </summary>
 
             <div style="border-left:16px #222222 solid;">

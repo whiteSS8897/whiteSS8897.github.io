@@ -17,7 +17,7 @@
             <div v-if="choose === '3-4'"><page3_4/></div>
             <div v-if="choose === '3-5'"><page3_5/></div>
             <div v-if="choose === '4'"><page4/></div>
-            <div v-if="choose === '5'"><page5/></div>
+            <div style="height:100%;" v-if="choose === '5'"><page5/></div>
             <div v-if="choose === '6'"><page6/></div>
             <div v-if="choose === '7'"><page7/></div>
             <div v-if="choose === '8'"><page8/></div>
@@ -53,8 +53,8 @@ const set_new_light = (new_light)=>{
 
 
 import mainlist from "./components/mainlist.vue"
-const list_names = {"page1_1":"頁面1-1",
-                    "page1_2":"頁面1-2",
+const list_names = {"page1_1":"ARC",
+                    "page1_2":"AUT",
                     "page2_1":"頁面2-1",
                     "page2_2":"頁面2-2",
                     "page3_1":"頁面3-1",
