@@ -1,5 +1,6 @@
 <template>
     <table style="display:contents;">
+        <th style="width:auto; min-width:80px;"></th>
         <th><div class="header"><div>賽爾尼溫</div><img src="/src/assets/imgs/賽爾尼溫.png" class="symbol_img"></div></th>
         <th><div class="header"><div>阿爾克斯</div><img src="/src/assets/imgs/阿爾克斯.png" class="symbol_img"></div></th>
         <th><div class="header"><div>奧迪溫</div><img src="/src/assets/imgs/奧迪溫.png" class="symbol_img"></div></th>
@@ -7,6 +8,7 @@
         <th><div class="header"><div>阿爾特利亞</div><img src="/src/assets/imgs/阿爾特利亞.png" class="symbol_img"></div></th>
         <th><div class="header"><div>卡爾西溫</div><img src="/src/assets/imgs/卡爾西溫.png" class="symbol_img"></div></th>
         <tr v-for="n in Object.values(aut_prices['Cernium']).length" v-bind:key="n">
+            <td class="r_head">{{ n }}</td>
             <td data-cell="消逝的旅途"> {{ formatNumber(aut_prices['Cernium'][n]) }} </td>
             <td data-cell="啾啾愛爾蘭"> {{ formatNumber(aut_prices['Arcus'][n]) }} </td>
             <td data-cell="拉契爾恩"> {{ formatNumber(aut_prices['Odium'][n]) }} </td>
@@ -66,5 +68,11 @@ tr:nth-child(2n+1){
     height:100%;
     align-content:center;
     flex-wrap:wrap;
+}
+.r_head{
+    background-color:#999999;
+    border-top:#dddddd solid 1px;
+    text-align: center;
+    font-weight:900;
 }
 </style>

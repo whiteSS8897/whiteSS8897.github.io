@@ -53,8 +53,8 @@ const set_new_light = (new_light)=>{
 
 
 import mainlist from "./components/mainlist.vue"
-const list_names = {"page1_1":"ARC",
-                    "page1_2":"AUT",
+const list_names = {"page1_1":"ARC 升級金額",
+                    "page1_2":"AUT 升級金額",
                     "page2_1":"頁面2-1",
                     "page2_2":"頁面2-2",
                     "page3_1":"頁面3-1",

@@ -1,5 +1,6 @@
 <template>
     <table style="display:contents;">
+        <th style="width:auto; min-width:80px;"></th>
         <th><div class="header"><div>消逝的旅途</div><img src="/src/assets/imgs/消逝的旅途.png" class="symbol_img"></div></th>
         <th><div class="header"><div>啾啾愛爾蘭</div><img src="/src/assets/imgs/啾啾愛爾蘭.png" class="symbol_img"></div></th>
         <th><div class="header"><div>拉契爾恩</div><img src="/src/assets/imgs/拉契爾恩.png" class="symbol_img"></div></th>
@@ -7,6 +8,7 @@
         <th><div class="header"><div>魔菈斯</div><img src="/src/assets/imgs/魔菈斯.png" class="symbol_img"></div></th>
         <th><div class="header"><div>艾斯佩拉</div><img src="/src/assets/imgs/艾斯佩拉.png" class="symbol_img"></div></th>
         <tr v-for="n in Object.values(arc_prices['Vanishing_Journey']).length" v-bind:key="n">
+            <td class="r_head">{{ n }}</td>
             <td data-cell="消逝的旅途"> {{ formatNumber(arc_prices['Vanishing_Journey'][n]) }} </td>
             <td data-cell="啾啾愛爾蘭"> {{ formatNumber(arc_prices['Chu_Chu_Island'][n]) }} </td>
             <td data-cell="拉契爾恩"> {{ formatNumber(arc_prices['Lachelein'][n]) }} </td>
@@ -36,6 +38,7 @@ const formatNumber = (num)=>{return num.toString().replace(/(\d)(?=(?:\d{3})+$)/
 table{
     width:100%;
     border-collapse:collapse;
+
 }
 th{
     background-color:#888888;
@@ -66,5 +69,11 @@ tr:nth-child(2n+1){
     height:100%;
     align-content:center;
     flex-wrap:wrap;
+}
+.r_head{
+    background-color:#999999;
+    border-top:#dddddd solid 1px;
+    text-align: center;
+    font-weight:900;
 }
 </style>
