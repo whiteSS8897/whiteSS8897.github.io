@@ -19,6 +19,12 @@
                     @mouseleave="untouch_list($event)">
                 {{names["page1_2"]}}
                 </div>
+                <div class="button detail_1_choice final_choice"
+                    @click="choose_list('1-3') ,choosed_list($event)"
+                    @mouseenter="touch_list($event)"
+                    @mouseleave="untouch_list($event)">
+                {{names["page1_3"]}}
+                </div>
             </div>
     </details>
 

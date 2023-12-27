@@ -46,14 +46,9 @@
             </div>
             
             <!-- 亮度數值框 -->
-            <div style="width:58px;">
-                <v-text-field
-                v-model="light"
-                hide-details
-                density="compact"/>
-            </div>
+            <input type=number style="width:56px; font-size:20px;" v-model="light">
             
-            <div style="padding:0 20px 0 50px;">
+            <div style="padding:0 20px;">
                 by 小白SSS
             </div>
         </div>
@@ -67,7 +62,7 @@ import {computed, reactive, ref, watch, onBeforeMount} from "vue";
 const light = ref(90)
 const emit = defineEmits(["update_light","list_expand"])
 watch(light,(new_light)=>{
-    if(new_light > 100){light.value=100}
+    if(new_light > 100){light.value=100;}
     emit("update_light",light)
 })
 

@@ -7,20 +7,21 @@
         </div>
 
         <div class="main_page">
-            <div v-if="choose === '1-1'"><page1_1/></div>
-            <div v-if="choose === '1-2'"><page1_2/></div>
-            <div v-if="choose === '2-1'"><page2_1/></div>
-            <div v-if="choose === '2-2'"><page2_2/></div>
-            <div v-if="choose === '3-1'"><page3_1/></div>
-            <div v-if="choose === '3-2'"><page3_2/></div>
-            <div v-if="choose === '3-3'"><page3_3/></div>
-            <div v-if="choose === '3-4'"><page3_4/></div>
-            <div v-if="choose === '3-5'"><page3_5/></div>
-            <div v-if="choose === '4'"><page4/></div>
-            <div style="height:100%;" v-if="choose === '5'"><page5/></div>
-            <div v-if="choose === '6'"><page6/></div>
-            <div v-if="choose === '7'"><page7/></div>
-            <div v-if="choose === '8'"><page8/></div>
+            <page1_1 v-if="choose === '1-1'"/>
+            <page1_2 v-if="choose === '1-2'"/>
+            <page1_3 v-if="choose === '1-3'"/>
+            <page2_1 v-if="choose === '2-1'"/>
+            <page2_2 v-if="choose === '2-2'"/>
+            <page3_1 v-if="choose === '3-1'"/>
+            <page3_2 v-if="choose === '3-2'"/>
+            <page3_3 v-if="choose === '3-3'"/>
+            <page3_4 v-if="choose === '3-4'"/>
+            <page3_5 v-if="choose === '3-5'"/>
+            <page4 v-if="choose === '4'"/>
+            <page5 v-if="choose === '5'"/>
+            <page6 v-if="choose === '6'"/>
+            <page7 v-if="choose === '7'"/>
+            <page8 v-if="choose === '8'"/>
         </div>
     </div>
 </template>
@@ -30,6 +31,7 @@
 import {computed, reactive, ref, watch, onBeforeMount} from "vue";
 import page1_1 from "./components/page1_1.vue";
 import page1_2 from "./components/page1_2.vue";
+import page1_3 from "./components/page1_3.vue";
 import page2_1 from "./components/page2_1.vue";
 import page2_2 from "./components/page2_2.vue";
 import page3_1 from "./components/page3_1.vue";
@@ -53,8 +55,9 @@ const set_new_light = (new_light)=>{
 
 
 import mainlist from "./components/mainlist.vue"
-const list_names = {"page1_1":"ARC 升級金額",
-                    "page1_2":"AUT 升級金額",
+const list_names = {"page1_1":"ARC 升級表",
+                    "page1_2":"AUT 升級表",
+                    "page1_3":"符文計算機",
                     "page2_1":"頁面2-1",
                     "page2_2":"頁面2-2",
                     "page3_1":"頁面3-1",
