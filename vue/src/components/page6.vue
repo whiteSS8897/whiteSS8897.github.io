@@ -6,9 +6,9 @@
             <br>
         </div>
     </div>
-    <div>每 {{ Round_to(100000000000/raid_power,2) }} 秒獲得ㄧ個硬幣</div>
-    <div>每天獲得 {{ Round_to(86400/100000000000*raid_power,2) }} 個硬幣</div>
-    <div>每周獲得 {{ Round_to(86400/100000000000*raid_power*7,2) }} 個硬幣</div>
+    <div>每 {{ Round_to(100000000000/raid_power,2).toLocaleString('en-US',{maximumFractionDigits:20}) }} 秒獲得一個硬幣</div>
+    <div>每天獲得 {{ Round_to(86400/100000000000*raid_power,2).toLocaleString('en-US',{maximumFractionDigits:20}) }} 個硬幣</div>
+    <div>每周獲得 {{ Round_to(86400/100000000000*raid_power*7,2).toLocaleString('en-US',{maximumFractionDigits:20}) }} 個硬幣</div>
     
 </template>
 
