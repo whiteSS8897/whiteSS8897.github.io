@@ -67,7 +67,7 @@ const list_names = {"page1_1":"ARC 升級表",
                     "page3_5":"頁面3-5",
                     "page4":"星力★",
                     "page5":"星火數據",
-                    "page6":"頁面6",
+                    "page6":"各種小算盤",
                     "page7":"頁面7",
                     "page8":"頁面8"};
 

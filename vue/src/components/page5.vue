@@ -15,9 +15,9 @@
                 <div v-if="out_of_range" class="warning_out_of_range">等級需在0~275之間</div>
             </div>
 
-            <div style="background-color:#ffff88; display:flex; justify-content:center; padding:5px; margin-top:40px; ">武器星火攻擊力小算盤</div>
-            <div style="background-color:#ffffbb66; padding:5px; text-align: center;">
-                武器白字：<input type="number" class="attack_input" v-model="input_attack">
+            <div style="background-color:#ffff88; display:flex; justify-content:center; padding:5px; margin-top:40px;">武器星火攻擊力小算盤</div>
+            <div style="background-color:#ffffbb66; padding:5px; text-align:center;">
+                武器白字：<input type=number class="attack_input" v-model="input_attack">
                 <br>
                 <select class="tier_select" v-model="input_tier">
                     <option value="1">T1</option>
@@ -28,7 +28,6 @@
                     <option value="6">T6</option>
                     <option value="7">T7</option>
                 </select>
-                
             </div>
             <div style="display:flex; justify-content:center; font-size:30px;">⇓</div>
             <div style="display:flex; justify-content:center;">
@@ -36,9 +35,9 @@
                 <span style="background-color:#ffffbb66; padding:5px 10px;">
                     +{{ Round_to(input_attack*(Math.floor(level/40)+1)*weapon_bonus[input_tier-1],6) }}攻
                 </span>
-
             </div>
         </div>
+
         <div>
             <table style="margin-left:30px;">
                 <tr style="position:relative;" v-if="search_as_scope"><th colspan="8" class="table_title">
@@ -102,6 +101,9 @@
                     <td v-for="i in Array.from(Array(7).keys())">{{ (i+1)*2 }}%</td>
                 </tr>
             </table>
+            <div v-if="240<=level && level<=259" style="color:#ff0000; margin-left:30px;">
+                韓版為了抑制永恆裝的強度，單屬跟防禦力需扣掉T數（12 , 24 , 36 , 48 , 60 , 72 , 84）
+            </div>
         </div>
     </div>
 </template>
