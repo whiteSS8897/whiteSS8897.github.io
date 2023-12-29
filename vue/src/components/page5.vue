@@ -34,7 +34,7 @@
             <div style="display:flex; justify-content:center;">
                 <span style="background-color:#ffff88; padding:5px 10px;">星火數值</span>
                 <span style="background-color:#ffffbb66; padding:5px 10px;">
-                    +{{ calc_attack }}攻
+                    +{{ Round_to(input_attack*(Math.floor(level/40)+1)*weapon_bonus[input_tier-1],6) }}攻
                 </span>
 
             </div>
@@ -91,8 +91,7 @@
                 <tr><th colspan="8" style="padding:4px 0;">武器專用</th></tr>
                 <tr>
                     <td>攻擊力</td>
-                    <td v-for="i in Array.from(Array(2).keys())">{{ (i+1)*(Math.floor(level/40)+1) }}%</td>
-                    <td v-for="i in Array.from(Array(5).keys())">{{ (i+3)*(Math.floor(level/40)+1)*Math.round(Math.pow(1.1,i)*100000)/100000 }}%</td>
+                    <td v-for="i in Array.from(Array(7).keys())">{{ Round_to((Math.floor(level/40)+1)*weapon_bonus[i]*100,6) }}%</td>
                 </tr>
                 <tr>
                     <td>總傷害</td>
@@ -134,12 +133,9 @@ const change_search_way = ()=>{
 }
 const input_attack = ref(0);
 const input_tier = ref(1);
+const weapon_bonus = reactive([0.01 ,0.02 ,0.03 ,0.044 ,0.0605 ,0.07986 ,0.102487]);
 watch(input_tier,(new_val)=>{input_tier.value = Number(new_val);})
-
-const calc_attack = computed(()=>{
-    if(input_tier.value<=3){return Math.round(input_attack.value*((input_tier.value*(Math.floor(level.value/40)+1))/100)*100000)/100000;}
-    else{return Math.round(input_attack.value*((input_tier.value*(Math.floor(level.value/40)+1)*Math.round(Math.pow(1.1,(input_tier.value-3))*100000)/100000))/100*10000000)/10000000;}
-})
+const Round_to = (num,f)=>{return Math.round(num*10**f)/10**f;}
 </script>
 
 
