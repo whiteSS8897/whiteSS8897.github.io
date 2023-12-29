@@ -87,6 +87,7 @@ const props = defineProps({
     height:60px;
     margin-bottom:10px;
     align-items:center;
+    white-space:nowrap;
 }
 .list_image{  /* 展開選單的按鈕 */
     width:50px;

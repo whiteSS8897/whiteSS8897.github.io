@@ -366,7 +366,7 @@ watch(Carcion_end,(new_num)=>{
     font-weight:700;
 }
 .input_level{
-    background-color:#fff0ff;
+    background-color:#ffffff;
     border:#888888 solid 1px;
     border-radius:6px;
     width:50px;

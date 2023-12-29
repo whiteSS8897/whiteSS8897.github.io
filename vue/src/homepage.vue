@@ -65,8 +65,8 @@ const list_names = {"page1_1":"ARC 升級表",
                     "page3_3":"頁面3-3",
                     "page3_4":"頁面3-4",
                     "page3_5":"頁面3-5",
-                    "page4":"星力數據",
-                    "page5":"頁面5",
+                    "page4":"星力★",
+                    "page5":"星火數據",
                     "page6":"頁面6",
                     "page7":"頁面7",
                     "page8":"頁面8"};
@@ -84,10 +84,10 @@ const click_list_expand = ()=>{
 
 //控制主畫面顯示第幾個
 const choose = ref("1-1")  //表示選擇清單第幾個
-    //接收從mainlist傳來的選擇
-    const list_choose_handle = (new_list_choise)=>{
-        choose.value = new_list_choise;
-    }
+//接收從mainlist傳來的選擇
+const list_choose_handle = (new_list_choise)=>{
+    choose.value = new_list_choise;
+}
 </script>
 
 

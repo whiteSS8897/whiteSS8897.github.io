@@ -1,20 +1,25 @@
 <template>
     <div style="display:flex;">
         <div>
-            查詢等級範圍:
-            <select class="scope_select" v-model="scope_choosed">
-                <option v-for="scope in Object.keys(star).sort()" v-bind:value="scope">{{ scope }}</option>
-            </select>
-            等
+            <div style="border:#cccccc dashed 3px;">
+                <div style="text-align:center; font-size:20px;">
+                    查詢等級範圍
+                </div>
+                <div style="text-align:center; font-size:20px;">
+                    <select class="scope_select" v-model="scope_choosed">
+                        <option v-for="scope in Object.keys(star).sort()" v-bind:value="scope">{{ scope }}</option>
+                    </select>
+                </div>
+            </div>
             <div style="background-color:#ffff88; display:flex; justify-content:center; padding:5px; margin-top:40px; ">星力小算盤</div>
             <div style="background-color:#ffffbb66; display:flex; align-items:center; padding:5px;">
                 
                 <select class="star_select" v-model="begin">
-                    <option v-for="s in Array.from(Array(10).keys(),(x,i)=>i+15)" v-bind:value="s">{{ s }}★</option>
+                    <option v-for="s in Array.from(Array(10).keys(),x=>x+15)" v-bind:value="s">{{ s }}★</option>
                 </select>
                 ～
                 <select class="star_select" v-model="end">
-                    <option v-for="s in Array.from(Array(10).keys(),(x,i)=>i+16)" v-bind:value="s">{{ s }}★</option>
+                    <option v-for="s in Array.from(Array(10).keys(),x=>x+16)" v-bind:value="s">{{ s }}★</option>
                 </select>
                 <div class="change_if_weapon button" @click="change_if_weapon">
                     <span v-if="is_weapon">武器</span>
@@ -30,7 +35,7 @@
         </div>
         <div>
             <table style="margin-left:30px;">
-                <tr style="position:relative;"><th colspan="4" class="big_title">{{ scope_choosed }}等</th></tr>
+                <tr style="position:relative;"><th colspan="4" class="table_title">{{ scope_choosed }}等</th></tr>
                 <th>星數</th>
                 <th>攻擊(武器)</th>
                 <th>攻擊(非武器)</th>
@@ -93,7 +98,7 @@ select{
     appearance:auto;
 }
 .scope_select{
-    width:100px;
+    width:130px;
     padding-right:6px;
     font-weight:900;
 }
@@ -122,7 +127,7 @@ td{
     text-align:center;
     position: relative;
 }
-.big_title::after{
+.table_title::after{
     content:"";
     position:absolute;
     width:100%;
@@ -158,17 +163,17 @@ td{
 }
 .change_if_weapon{
     font-weight:900;
-    background-color:#aaaaaa;
+    background-color:#ff99ff88;
     padding:2px 0;
     border-radius:10px;
     display:flex;
     justify-content:center;
     align-items:center;
-    box-shadow: 2px -2px 4px 1px #00000066 inset,-1px 1px 4px 1px #ffffff88 inset;
+    box-shadow: 2px -2px 4px 1px #00000044 inset,-1px 1px 4px 1px #ffffff88 inset;
     width:70px;
     margin-left:10px;
 }
 .change_if_weapon:hover{
-    background-color:#888888;
+    background-color:#ee11ee88;
 }
 </style>
