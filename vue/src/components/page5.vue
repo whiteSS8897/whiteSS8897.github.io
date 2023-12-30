@@ -15,7 +15,7 @@
                 <div v-if="out_of_range" class="warning_out_of_range">等級需在0~275之間</div>
             </div>
 
-            <div style="background-color:#ffff88; display:flex; justify-content:center; padding:5px; margin-top:40px;">武器星火攻擊力小算盤</div>
+            <div style="background-color:#ffff88; text-align:center; padding:5px; margin-top:40px;">武器星火攻擊力小算盤</div>
             <div style="background-color:#ffffbb66; padding:5px; text-align:center;">
                 武器白字：<input type=number class="attack_input" v-model="input_attack">
                 <br>

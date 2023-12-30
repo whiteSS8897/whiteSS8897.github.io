@@ -11,7 +11,7 @@
                     </select>
                 </div>
             </div>
-            <div style="background-color:#ffff88; display:flex; justify-content:center; padding:5px; margin-top:40px; ">星力小算盤</div>
+            <div style="background-color:#ffff88; text-align:center; padding:5px; margin-top:40px; ">星力小算盤</div>
             <div style="background-color:#ffffbb66; display:flex; align-items:center; padding:5px;">
                 
                 <select class="star_select" v-model="begin">
