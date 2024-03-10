@@ -83,7 +83,7 @@ watch([scope_choosed,begin,end,is_weapon],(newarr)=>{
     else{temp = search['non_weapon']}
     for(let i=newarr[1]+1;i<=newarr[2];i++){
         if(typeof(temp[i]) === "number"){calculated_attack.value += temp[i];}
-        if(typeof(temp[i]) === "number"){calculated_all_stat.value += search['all_stat']}
+        if(i<=22){calculated_all_stat.value += search['all_stat']}
     }
 })
 </script>
