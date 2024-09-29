@@ -128,7 +128,7 @@ watch(level,(new_num,old_num)=>{
     }
 })
 
-const search_as_scope = ref(false);
+const search_as_scope = ref(true);
 const change_search_way = ()=>{
     if(!search_as_scope.value){scope_choosed.value = Math.floor(level.value/20);}
     search_as_scope.value = !search_as_scope.value;
